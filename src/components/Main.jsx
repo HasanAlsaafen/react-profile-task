@@ -1,14 +1,16 @@
 import { FaArrowLeft } from "react-icons/fa6";
 import ProfileInfo from "./ProfileInfo";
 import react from "../assets/react.png";
+import reactBg from "../assets/reactBg.png";
 import ElMu from "../assets/Elonmusk.jpg";
+import Section from "./Sections";
 export default function Main() {
   const reactProfile = {
     name: "React",
     account: "@react",
     bio: "A JavaScript library for building user interfaces.",
     pImg: react,
-    bgImg: react,
+    bgImg: reactBg,
     following: 1,
     followers: 2900000,
     joined: "July 2013",
@@ -48,6 +50,7 @@ export default function Main() {
         link={reactProfile.link}
         followedBy={reactProfile.followedBy}
       />
+      <Section />
     </main>
   );
 }
