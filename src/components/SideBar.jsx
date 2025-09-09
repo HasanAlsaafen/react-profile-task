@@ -54,6 +54,7 @@ export default function SideBar() {
         photo={HasanPhoto}
         name="Hasan Al-Saafin"
         account="@hasanSaafin"
+        className={"sidebar-user"}
       >
         ...{" "}
       </UserCard>

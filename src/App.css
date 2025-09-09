@@ -59,12 +59,18 @@
 .user-card {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-top: auto;
-  padding: 8px 16px;
+  justify-content: space-between;
+
+  cursor: pointer;
+}
+
+.user-card-upper {
+  display: flex;
+  gap: 4px;
+}
+.sidebar-user {
   position: fixed;
   bottom: 0;
-  cursor: pointer;
 }
 .user-card-photo {
   width: 40px;
@@ -357,6 +363,24 @@
   height: 24px;
   text-align: center;
   width: 24px;
-  left: 98%;
+  left: 95%;
   bottom: -30%;
+}
+.who-to-follow-title {
+  margin: 1em;
+}
+.who-to-follow-desc {
+  position: relative;
+  overflow-wrap: break-word;
+  width: 90%;
+  left: 48px;
+}
+.who-to-follow-followers {
+  color: gray;
+  font-size: 0.8em;
+  margin-left: 48px;
+}
+.show-more {
+  margin: 1em 0.5em;
+  color: dodgerblue;
 }

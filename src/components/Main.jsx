@@ -6,6 +6,7 @@ import ElMu from "../assets/Elonmusk.jpg";
 import Section from "./Sections";
 import Hasan from "../assets/F.S.jpg";
 import Post from "./Post";
+import WhoToFollow from "./WhoToFollow";
 export default function Main() {
   const reactProfile = {
     name: "React",
@@ -54,6 +55,7 @@ export default function Main() {
       />
       <Section />
       <Post />
+      <WhoToFollow />
     </main>
   );
 }
