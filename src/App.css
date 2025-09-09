@@ -29,6 +29,9 @@
 .side-bar-links {
   height: fit-content;
 }
+.side-bar button {
+  width: 12em;
+}
 .side-bar-link {
   display: flex;
   align-items: center;
@@ -47,7 +50,6 @@
   border-radius: 2em;
   font-weight: bold;
   border: none;
-  width: 12em;
   cursor: pointer;
   margin: 16px;
 }
@@ -60,7 +62,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  color: var(--secondery-color);
   cursor: pointer;
 }
 
@@ -105,7 +107,7 @@
 
 .main-header {
   background-color: var(--primary-color);
-  width: 60%;
+  width: 100%;
   height: 6em;
   border-bottom: 2px solid #232323;
   display: flex;
@@ -119,7 +121,9 @@
   gap: 4px;
   margin-top: 16px;
 }
-
+.to-follow {
+  padding-left: 2em;
+}
 .main-header p {
   color: gray;
 }
@@ -145,7 +149,7 @@
 }
 .profile-info-bg {
   position: relative;
-  width: 100%;
+  width: 90%;
   height: 20em;
   top: -6.5em;
   left: 0;
@@ -266,7 +270,7 @@
 }
 .sections {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   border-bottom: 2px solid #232323;
   padding: 2em;
 }
@@ -380,6 +384,7 @@
   color: gray;
   font-size: 0.8em;
   margin-left: 48px;
+  gap: 0.5em;
 }
 .show-more {
   margin: 1em 0.5em;
@@ -390,6 +395,7 @@
   flex-direction: column;
   background-color: var(--primary-color);
   height: 100vh;
+  overflow: auto;
   position: fixed;
   width: 28%;
   border-left: #232323 1px solid;
@@ -414,4 +420,51 @@
   font-size: 1em;
   color: gray;
   left: 1.25em;
+}
+.you-might-like {
+  padding: 1em;
+  margin-top: 2em;
+  background-color: #17181c;
+  border-radius: 2em;
+  width: 80%;
+}
+.menu-icon {
+  position: relative;
+  left: 9em;
+  bottom: 2.5em;
+}
+.menu-icon {
+  display: none;
+}
+.trend-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0.75em 0.25em;
+  padding: 0.25em 0.75em;
+}
+.trend-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: gray;
+  font-size: 0.9em;
+}
+.trend-card-footer {
+  color: gray;
+  font-size: 0.9em;
+}
+.trend-card-title {
+  font-size: 1.25em;
+  color: var(--secondery-color);
+}
+.other-footer {
+  display: flex;
+  padding: 1em 4em;
+  gap: 4px;
+  flex-wrap: wrap;
+  font-size: 0.75em;
+  color: gray;
+}
+@media (max-width: 900px) {
 }

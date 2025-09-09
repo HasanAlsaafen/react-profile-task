@@ -12,6 +12,10 @@ import { FaXTwitter } from "react-icons/fa6";
 import Button from "./Button";
 import UserCard from "./UserCard";
 import HasanPhoto from "../assets/F.S.jpg";
+
+import { useState } from "react";
+import { CiMenuBurger } from "react-icons/ci";
+
 export default function SideBar() {
   const links = [
     {
@@ -32,32 +36,48 @@ export default function SideBar() {
     { id: 8, name: "Profile", icon: <IoMdPerson /> },
     { id: 9, name: "More", icon: <CiCircleMore /> },
   ];
+  const [open, setOpen] = useState(true);
   return (
     <div className="side-bar">
-      <div className="side-bar-logo">
-        <FaXTwitter />
-      </div>
-      <div className="side-bar-links">
-        {links.map((link) => {
-          return (
-            <div key={link.id} className="side-bar-link">
-              <div className="side-bar-link-icon">{link.icon}</div>
-              <div className="side-bar-link-name">{link.name}</div>
-            </div>
-          );
-        })}
-      </div>
-      <Button bg="#1d9bf0" color="white" className={"side-bar-tweet-btn"}>
-        Post
-      </Button>
-      <UserCard
-        photo={HasanPhoto}
-        name="Hasan Al-Saafin"
-        account="@hasanSaafin"
-        className={"sidebar-user"}
-      >
-        ...{" "}
-      </UserCard>
+      {open && (
+        <div className="side-bar-logo">
+          <FaXTwitter />
+        </div>
+      )}
+      <CiMenuBurger
+        className="menu-icon"
+        onClick={() => {
+          setOpen((o) => !o);
+        }}
+      />
+      {open && (
+        <div className="side-bar-links">
+          {links.map((link) => {
+            return (
+              <div key={link.id} className="side-bar-link">
+                <div className="side-bar-link-icon">{link.icon}</div>
+                <div className="side-bar-link-name">{link.name}</div>
+              </div>
+            );
+          })}
+        </div>
+      )}
+      {open && (
+        <Button bg="#1d9bf0" color="white" className={"side-bar-tweet-btn"}>
+          Post
+        </Button>
+      )}
+
+      {open && (
+        <UserCard
+          photo={HasanPhoto}
+          name="Hasan Al-Saafin"
+          account="@hasanSaafin"
+          className={"sidebar-user"}
+        >
+          ...{" "}
+        </UserCard>
+      )}
     </div>
   );
 }
