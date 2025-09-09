@@ -4,6 +4,8 @@ import react from "../assets/react.png";
 import reactBg from "../assets/reactBg.png";
 import ElMu from "../assets/Elonmusk.jpg";
 import Section from "./Sections";
+import Hasan from "../assets/F.S.jpg";
+import Post from "./Post";
 export default function Main() {
   const reactProfile = {
     name: "React",
@@ -51,6 +53,7 @@ export default function Main() {
         followedBy={reactProfile.followedBy}
       />
       <Section />
+      <Post />
     </main>
   );
 }

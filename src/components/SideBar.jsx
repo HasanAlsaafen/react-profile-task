@@ -47,7 +47,7 @@ export default function SideBar() {
           );
         })}
       </div>
-      <Button bg="#1d9bf0" color="white">
+      <Button bg="#1d9bf0" color="white" className={"side-bar-tweet-btn"}>
         Post
       </Button>
       <UserCard
