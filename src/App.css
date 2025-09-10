@@ -466,5 +466,38 @@
   font-size: 0.75em;
   color: gray;
 }
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
+  .main {
+    width: 50%;
+    font-size: 0.9em;
+  }
+  .user-card {
+    flex-wrap: wrap;
+  }
+  .other {
+    width: 35.4%;
+    font-size: 0.9em;
+  }
+}
+.user-card {
+  flex-wrap: wrap;
+}
+@media (max-width: 1000px) {
+  .side-bar {
+    display: none;
+  }
+  .other {
+    display: none;
+  }
+  .main {
+    width: 100vw;
+    position: absolute;
+    right: 0em;
+  }
+  .profile-info-bg {
+    object-fit: fill;
+  }
+  .show-more {
+    margin-left: 2em;
+  }
 }

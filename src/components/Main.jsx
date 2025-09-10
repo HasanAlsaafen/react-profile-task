@@ -5,6 +5,7 @@ import reactBg from "../assets/reactBg.png";
 import ElMu from "../assets/Elonmusk.jpg";
 import Section from "./Sections";
 import Hasan from "../assets/F.S.jpg";
+import fcc from "../assets/fcc.png";
 import Post from "./Post";
 import WhoToFollow from "./WhoToFollow";
 export default function Main() {
@@ -29,6 +30,47 @@ export default function Main() {
       },
     ],
   };
+  const post = {
+    img: Hasan,
+    name: "Hasan Al-Saafin",
+    account: "@HasanAlSaafin",
+    content: "Happy BirthDay react 🎂",
+    reactions: {
+      comments: 46,
+      reposts: 675,
+      likes: 3701,
+      analitics: "1.1M",
+    },
+  };
+  const whoToFollow = [
+    {
+      id: 1,
+      img: fcc,
+      name: "freeCodeCamp.org",
+      account: "@freeCodeCamp",
+      followedBy: ["Node.js", "Express.js"],
+      contnet:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem accusamus amet aliquam molestias minus maxime, in excepturi ut suscipit rem quisquam ab culpa. Illo officiis ea nesciunt qui dolor iure!",
+    },
+    {
+      id: 2,
+      img: fcc,
+      name: "freeCodeCamp.org",
+      account: "@freeCodeCamp",
+      followedBy: ["Node.js", "Express.js"],
+      contnet:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem accusamus amet aliquam molestias minus maxime, in excepturi ut suscipit rem quisquam ab culpa. Illo officiis ea nesciunt qui dolor iure!",
+    },
+    {
+      id: 3,
+      img: fcc,
+      name: "freeCodeCamp.org",
+      account: "@freeCodeCamp",
+      followedBy: ["Node.js", "Express.js", "Hasan Saafen"],
+      contnet:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem accusamus amet aliquam molestias minus maxime, in excepturi ut suscipit rem quisquam ab culpa. Illo officiis ea nesciunt qui dolor iure!",
+    },
+  ];
 
   return (
     <main className="main">
@@ -54,8 +96,8 @@ export default function Main() {
         followedBy={reactProfile.followedBy}
       />
       <Section />
-      <Post />
-      <WhoToFollow />
+      <Post post={post} />
+      <WhoToFollow data={whoToFollow} />
     </main>
   );
 }
